@@ -1,0 +1,36 @@
+name: Lab
+description: A new lab in the series
+title: "[Series] Lab NN: "
+labels: [lab]
+body:
+  - type: input
+    id: series
+    attributes:
+      label: Series
+  - type: input
+    id: phase
+    attributes:
+      label: Phase
+  - type: input
+    id: depends
+    attributes:
+      label: Depends on
+  - type: textarea
+    id: core
+    attributes:
+      label: Core scope (~6-8 hours)
+      value: "- [ ] "
+  - type: textarea
+    id: stretch
+    attributes:
+      label: Stretch
+      value: "- [ ] "
+  - type: checkboxes
+    id: done
+    attributes:
+      label: Definition of done
+      options:
+        - label: Core scope complete, tests passing
+        - label: Demo in series/<series>/NN-slug/demo/
+        - label: Post published on markrox.ai and linked from labs.markrox.ai
+        - label: Update posted in #dsi-ai-labs
