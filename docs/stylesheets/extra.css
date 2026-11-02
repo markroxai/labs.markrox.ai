@@ -1,0 +1,7 @@
+/* Hide the repeated site title at the top of the left nav on desktop.
+   Kept on mobile, where it labels the slide-out drawer. */
+@media screen and (min-width: 76.25em) {
+  .md-nav--primary > .md-nav__title {
+    display: none;
+  }
+}

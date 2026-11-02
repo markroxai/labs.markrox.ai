@@ -1,4 +1,4 @@
-site_name: Labs
+site_name: Labs.MarkRox.AI
 site_url: https://labs.markrox.ai
 site_description: "Hands-on builds in AI: code, demos, and write-ups"
 repo_url: https://github.com/markroxai/labs.markrox.ai
@@ -11,8 +11,32 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle: {icon: material/weather-sunny, name: Light mode}
-  features: [navigation.instant, navigation.top]
+  features: [navigation.instant, navigation.top, navigation.indexes]
+extra_css: [stylesheets/extra.css]
 extra:
   social:
     - icon: material/web
       link: https://markrox.ai
+
+# BEGIN GENERATED NAV (scripts/bootstrap.py rewrites this block; edit series.yaml instead)
+nav:
+  - Series: index.md
+  - "AI Eval Labs":
+      - ai-eval/index.md
+      - "Lab 00: Setup and Reference Agent": ai-eval/00-setup.md
+      - "Lab 01: Trajectory Grading Engine": ai-eval/01-trajectory-grader.md
+      - "Lab 02: Statistical Significance Engine": ai-eval/02-significance-engine.md
+      - "Lab 03: Calibrated LLM-as-a-Judge": ai-eval/03-llm-judge.md
+      - "Lab 04: Dataset Contamination Checker": ai-eval/04-contamination-checker.md
+      - "Lab 05: RAG Adversarial Harness": ai-eval/05-rag-adversarial.md
+      - "Lab 06: Synthetic Edge-Case Generator": ai-eval/06-edge-case-generator.md
+      - "Lab 07: Agent Red-Team Fuzzer": ai-eval/07-red-team-fuzzer.md
+      - "Lab 08: Context Window Eviction Tester": ai-eval/08-context-eviction.md
+      - "Lab 09: CI/CD Regression Gate": ai-eval/09-ci-regression-gate.md
+      - "Lab 10: Counterfactual Replay Debugger": ai-eval/10-replay-debugger.md
+      - "Lab 11: Shadow Routing Comparator": ai-eval/11-shadow-routing.md
+      - "Lab 12: Production Drift Monitor": ai-eval/12-drift-monitor.md
+      - "Lab 13: Cost-Quality Pareto Dashboard": ai-eval/13-pareto-dashboard.md
+      - "Lab 14: Automated DPO Flywheel": ai-eval/14-dpo-flywheel.md
+      - "Lab 15: Public Eval Methodology Teardown": ai-eval/15-methodology-teardown.md
+# END GENERATED NAV

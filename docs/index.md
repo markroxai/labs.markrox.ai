@@ -1,4 +1,4 @@
-# Labs
+# Labs.MarkRox.AI
 
 Hands-on builds in AI. Each lab ships code, a demo, and a write-up. Write-ups live on [markrox.ai](https://markrox.ai).
 

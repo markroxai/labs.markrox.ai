@@ -215,6 +215,30 @@ def write_site(all_series):
         for lab in s["labs"]:
             (d / f"{lab_id(lab)}.md").write_text(site_lab_page(s, lab))
     (DOCS / "index.md").write_text(site_home(all_series))
+    write_nav(all_series)
+
+
+def write_nav(all_series):
+    """Rewrite the generated nav block in mkdocs.yml: Series home, then one section per series.
+
+    With navigation.indexes, each series' index.md becomes the clickable section header,
+    so the section label and the page heading are both the series title.
+    """
+    def q(text):
+        return '"' + text.replace('"', '\\"') + '"'
+
+    lines = ["nav:", "  - Series: index.md"]
+    for s in all_series:
+        lines.append(f"  - {q(s['title'])}:")
+        lines.append(f"      - {s['slug']}/index.md")
+        for lab in s["labs"]:
+            lines.append(f"      - {q(lab_label(lab))}: {s['slug']}/{lab_id(lab)}.md")
+    begin, end = "# BEGIN GENERATED NAV", "# END GENERATED NAV"
+    cfg = (ROOT / "mkdocs.yml").read_text()
+    head, rest = cfg.split(begin, 1)
+    _, tail = rest.split(end, 1)
+    first_line = rest.split("\n", 1)[0]   # keep the marker's trailing comment
+    (ROOT / "mkdocs.yml").write_text(head + begin + first_line + "\n" + "\n".join(lines) + "\n" + end + tail)
 
 
 # ---------- new series ----------
@@ -255,7 +279,10 @@ def new_series(slug, title):
 # ---------- GitHub ----------
 
 def gh(*args):
-    return subprocess.run(["gh", *args], check=True, capture_output=True, text=True).stdout
+    r = subprocess.run(["gh", *args], capture_output=True, text=True)
+    if r.returncode != 0:
+        raise SystemExit(f"gh {' '.join(args)}\n  failed: {r.stderr.strip()}")
+    return r.stdout
 
 
 def create_issues(all_series, only=None):
