@@ -1,0 +1,7 @@
+# Global settings shared by every series.
+title: Labs
+tagline: Hands-on builds in AI. Each lab ships code, a demo, and a write-up.
+blog: https://markrox.ai
+site: https://labs.markrox.ai
+repo: https://github.com/markroxai/labs.markrox.ai
+slack: "#dsi-ai-labs"

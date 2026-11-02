@@ -1,0 +1,228 @@
+# Series definition: AI Eval Labs
+# scripts/bootstrap.py generates lab folders, site pages, plan.md, and GitHub issues from this file.
+# "lab" = run order within the series (one per week). "orig" = number in the original training plan.
+
+title: AI Eval Labs
+short: AI Eval
+status: active          # planned | active | complete
+summary: >-
+  Hands-on builds in AI evaluation: grading, statistics, judges,
+  robustness, and production eval pipelines.
+
+phases:
+  0: Setup
+  1: Foundations
+  2: Robustness and Security
+  3: Production Pipelines
+  4: Publish
+
+labs:
+  - lab: 0
+    slug: setup
+    title: Setup and Reference Agent
+    phase: 0
+    orig: null
+    depends: []
+    core:
+      - Repo, labels, milestones, and Project board in place
+      - Reference agent in harness/ with 3-4 mock tools and a small RAG corpus
+      - Synthetic task suite (~30 tasks) with expected outcomes
+      - labs.markrox.ai live via GitHub Pages
+      - "#dsi-ai-labs created and launch post sent"
+    stretch:
+      - Swappable model backends (frontier + small open model)
+
+  - lab: 1
+    slug: trajectory-grader
+    title: Trajectory Grading Engine
+    phase: 1
+    orig: 1
+    depends: [0]
+    core:
+      - Define a deterministic DAG of expected tool calls for the task suite
+      - Score each step; fail on hallucinated API params or skipped checks
+      - Report the exact step where the run broke
+    stretch:
+      - Partial credit for valid alternative orderings
+
+  - lab: 2
+    slug: significance-engine
+    title: Statistical Significance Engine
+    phase: 1
+    orig: 7
+    depends: [1]
+    core:
+      - Bootstrap utility for model-vs-model deltas
+      - Output win margin with confidence interval and p-value
+      - Flag deltas that are noise at the current sample size
+    stretch:
+      - Power analysis (sample size needed to detect a given delta)
+
+  - lab: 3
+    slug: llm-judge
+    title: Calibrated LLM-as-a-Judge
+    phase: 1
+    orig: 3
+    depends: [1, 2]
+    core:
+      - Human-labeled anchor set of ~100 items
+      - Measure verbosity, position, and self-preference bias
+      - Document judge agreement vs. human labels (Cohen's kappa)
+    stretch:
+      - Grow anchor set to 500 items
+
+  - lab: 4
+    slug: contamination-checker
+    title: Dataset Contamination Checker
+    phase: 1
+    orig: 14
+    depends: []
+    core:
+      - N-gram overlap scan between eval set and a public training corpus sample
+      - Embedding similarity scan for near-duplicates
+      - Contamination report with thresholds
+    stretch:
+      - MinHash/LSH to scale to large corpora
+
+  - lab: 5
+    slug: rag-adversarial
+    title: RAG Adversarial Harness
+    phase: 2
+    orig: 5
+    depends: [3]
+    core:
+      - Inject irrelevant context and contradictory documents
+      - Remove citations and test for grounded abstention
+      - Score confident-but-ungrounded answers as failures
+    stretch:
+      - Per-perturbation degradation curves
+
+  - lab: 6
+    slug: edge-case-generator
+    title: Synthetic Edge-Case Generator
+    phase: 2
+    orig: 12
+    depends: [3]
+    core:
+      - Use a frontier model to generate out-of-distribution inputs
+      - Cover boundary conditions systematically
+      - Review and add accepted cases to the golden dataset
+    stretch:
+      - Judge-filtered generation with dedup against existing set
+
+  - lab: 7
+    slug: red-team-fuzzer
+    title: Agent Red-Team Fuzzer
+    phase: 2
+    orig: 8
+    depends: [1]
+    core:
+      - Inject prompt injections into agent inputs and tool outputs
+      - Feed malformed tool schemas
+      - Trigger infinite-loop conditions; verify guardrails
+    stretch:
+      - Mutation-based fuzzing with a coverage score
+
+  - lab: 8
+    slug: context-eviction
+    title: Context Window Eviction Tester
+    phase: 2
+    orig: 13
+    depends: [1]
+    core:
+      - Fill agent working memory with noise
+      - Test compression, eviction, and retrieval of key state
+      - Measure task success as context pressure rises
+    stretch:
+      - Compare two memory strategies head to head
+
+  - lab: 9
+    slug: ci-regression-gate
+    title: CI/CD Regression Gate
+    phase: 3
+    orig: 4
+    depends: [1, 2]
+    core:
+      - GitHub Action running parameterized evals on every PR
+      - Block merge if task success drops 2% (significance-checked) or latency spikes
+      - Publish eval summary as a PR comment
+    stretch:
+      - Cached baselines and per-tag gating
+
+  - lab: 10
+    slug: replay-debugger
+    title: Counterfactual Replay Debugger
+    phase: 3
+    orig: 11
+    depends: [1]
+    core:
+      - Record every LLM hop and tool output
+      - Swap one node and replay the rest of the trajectory
+      - Isolate the step that introduced a hallucination
+    stretch:
+      - Automated bisection across nodes
+
+  - lab: 11
+    slug: shadow-routing
+    title: Shadow Routing Comparator
+    phase: 3
+    orig: 2
+    depends: [1, 2]
+    core:
+      - Proxy mirroring a sample of simulated traffic to a candidate model
+      - Diff trajectories between current and candidate
+      - Auto-generate a cost/quality report
+    stretch:
+      - Configurable sampling and canary percentage
+
+  - lab: 12
+    slug: drift-monitor
+    title: Production Drift Monitor
+    phase: 3
+    orig: 9
+    depends: [1, 3]
+    core:
+      - Nightly sampling job over simulated live traffic
+      - Run offline trajectory evals on samples
+      - Alert on quality decay trends
+    stretch:
+      - Input-distribution drift (embedding shift) alongside quality drift
+
+  - lab: 13
+    slug: pareto-dashboard
+    title: Cost-Quality Pareto Dashboard
+    phase: 3
+    orig: 10
+    depends: [2]
+    core:
+      - Collect cost and success rate per routing strategy
+      - Plot the Pareto frontier per tenant, with confidence intervals
+      - Compare reasoning-heavy vs. fast routing
+    stretch:
+      - Interactive dashboard published to labs.markrox.ai
+
+  - lab: 14
+    slug: dpo-flywheel
+    title: Automated DPO Flywheel
+    phase: 3
+    orig: 6
+    depends: [3]
+    core:
+      - Capture simulated thumbs-down feedback
+      - Format feedback into preference pairs
+      - LoRA fine-tune a small open model and re-eval
+    stretch:
+      - Scheduled end-to-end loop with regression gate
+
+  - lab: 15
+    slug: methodology-teardown
+    title: Public Eval Methodology Teardown
+    phase: 4
+    orig: 15
+    depends: [1, 2, 3]
+    core:
+      - "Deep-dive 1: grading rubrics"
+      - "Deep-dive 2: judge prompts and calibration"
+      - "Deep-dive 3: statistical framework"
+    stretch:
+      - Series retrospective post

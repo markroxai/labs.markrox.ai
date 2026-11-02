@@ -1,0 +1,18 @@
+site_name: Labs
+site_url: https://labs.markrox.ai
+site_description: "Hands-on builds in AI: code, demos, and write-ups"
+repo_url: https://github.com/markroxai/labs.markrox.ai
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle: {icon: material/weather-night, name: Dark mode}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle: {icon: material/weather-sunny, name: Light mode}
+  features: [navigation.instant, navigation.top]
+extra:
+  social:
+    - icon: material/web
+      link: https://markrox.ai
