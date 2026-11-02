@@ -4,15 +4,17 @@
 
 ## Core scope
 
-- [ ] Repo, labels, milestones, and Project board in place
-- [ ] Reference agent in harness/ with 3-4 mock tools and a small RAG corpus
-- [ ] Synthetic task suite (~30 tasks) with expected outcomes
-- [ ] labs.markrox.ai live via GitHub Pages
-- [ ] #dsi-ai-labs created and launch post sent
+- [ ] Repo, issues, labs.markrox.ai, and #dsi-ai-labs (done)
+- [ ] Model registry (models.yaml) with mock, local, and hosted entries behind one client
+- [ ] Research corpus of ~40 public-domain US federal AI documents, chunked and indexed
+- [ ] Research assistant agent with 4 tools: search_corpus, read_document, list_sections, submit_answer
+- [ ] Task suite of ~30 tasks with expected tool DAG, answer, and citations
+- [ ] Trace recorder (JSONL) and a run CLI; tests pass offline with the mock backend
 
 ## Stretch
 
-- [ ] Swappable model backends (frontier + small open model)
+- [ ] Embedding retrieval alongside BM25
+- [ ] Second model run end to end for a first comparison
 
 ## Links
 

@@ -1,22 +1,26 @@
 # AI Eval harness: the system under test
 
-Every lab in the AI Eval series evaluates this shared reference agent, so no lab starts from scratch.
+A research assistant agent over a public-domain corpus. Every lab in the AI Eval series evaluates this agent, so no lab starts from scratch. Full spec: [Lab 00](../00-setup/README.md).
 
-## Lab 00 builds
+## Layout
 
-- `agent/`: a small tool-using agent with swappable model backends
-- `tools/`: 3-4 mock tools (e.g. search, calculator, order lookup, ticket create) with strict schemas
-- `corpus/`: a small public-domain document set for RAG
-- `tasks/`: ~30 synthetic tasks, each with expected tool-call DAG and expected answer
-- `traces/`: recorded runs (JSONL) that later labs grade, replay, and compare
-
-## Trace format (draft)
-
-One JSON object per step:
-
-```json
-{"run_id": "...", "step": 3, "type": "tool_call", "tool": "order_lookup",
- "args": {"order_id": "A-1001"}, "output": {...}, "latency_ms": 412, "tokens": {"in": 812, "out": 64}}
+```
+models.yaml        model registry (mock, local, hosted); chosen with --model
+corpus/            manifest.yaml + sections.jsonl (public-domain US federal AI publications)
+tasks/             ~30 tasks: lookup, multi_hop, compare, unanswerable
+src/harness/       models.py, tools.py, agent.py, trace.py, cli.py
+traces/            run output (JSONL); only small mock fixtures are committed
+tests/             offline tests using the mock backend
 ```
 
-Keep this format stable: labs 01, 09, 10, 11, and 12 depend on it.
+## Tools
+
+`search_corpus`, `list_sections`, `read_document`, `submit_answer`. Unknown IDs return structured errors, which Lab 01 uses to detect hallucinated parameters.
+
+## Trace schema
+
+Schema version **1**, defined in `src/harness/trace.py`. Labs 01, 09, 10, 11, and 12 depend on it. Any change bumps the version and gets a changelog entry here.
+
+## Changelog
+
+- v1: initial schema

@@ -1,0 +1,48 @@
+# Model registry. Labs choose models by name: --model <name>.
+# Keys come from env vars (see .env.example). Costs are USD per 1M tokens, for estimates only;
+# check current provider pricing before relying on them.
+
+models:
+  mock:
+    provider: mock
+    notes: Deterministic fixture replay. Used by all default tests and CI.
+
+  local-llama:
+    provider: ollama
+    model: ollama/llama3.1:8b
+    api_base_env: OLLAMA_API_BASE      # default http://localhost:11434
+    cost: {input: 0, output: 0}
+
+  local-qwen:
+    provider: ollama
+    model: ollama/qwen2.5:7b
+    api_base_env: OLLAMA_API_BASE
+    cost: {input: 0, output: 0}
+
+  # Hosted entries: fill in model IDs when a lab needs them.
+  # Any key works (personal or work); attribution is decided per lab.
+  claude:
+    provider: anthropic
+    model: anthropic/<model-id>
+    key_env: ANTHROPIC_API_KEY
+    cost: {input: null, output: null}
+
+  azure-openai:
+    provider: azure
+    model: azure/<deployment-name>
+    key_env: AZURE_API_KEY
+    api_base_env: AZURE_API_BASE
+    api_version_env: AZURE_API_VERSION
+    cost: {input: null, output: null}
+
+  openai:
+    provider: openai
+    model: openai/<model-id>
+    key_env: OPENAI_API_KEY
+    cost: {input: null, output: null}
+
+  gemini:
+    provider: gemini
+    model: gemini/<model-id>
+    key_env: GEMINI_API_KEY
+    cost: {input: null, output: null}
