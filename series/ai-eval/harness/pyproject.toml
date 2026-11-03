@@ -11,6 +11,9 @@ dependencies = [
 ]
 
 [dependency-groups]
+corpus = [
+    "pypdf>=6.21.4",
+]
 dev = [
     "pytest>=8.0",
     "ruff>=0.6",

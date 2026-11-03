@@ -12,7 +12,7 @@ Lab 00 builds the subject, not the evaluation. Keep it simple, deterministic whe
 
 - [x] Repo, issues, labs.markrox.ai, and #dsi-ai-labs
 - [ ] Model registry with `mock`, local, and hosted entries behind one client
-- [ ] Corpus of ~40 public-domain documents, chunked by section and indexed
+- [x] Corpus of ~40 public-domain documents, chunked by section and indexed
 - [ ] Research assistant agent with 4 tools
 - [ ] Task suite of ~30 tasks with expected tool DAG, answer, and citations
 - [ ] Trace recorder (JSONL) and `harness run` CLI

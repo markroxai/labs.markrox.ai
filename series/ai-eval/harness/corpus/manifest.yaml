@@ -1,0 +1,311 @@
+# Corpus manifest. Source of truth for which documents are in the corpus.
+documents:
+- doc_id: nist-ai-100-1
+  title: Artificial Intelligence Risk Management Framework (AI RMF 1.0)
+  publisher: NIST
+  year: 2023
+  source_url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1
+- doc_id: nist-ai-600-1
+  title: 'Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile'
+  publisher: NIST
+  year: 2024
+  source_url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 6e73620ab6b64e90ef2c04bf0e0d6246185a2f4b1b13cab0df494496cff89b6a
+- doc_id: nist-ai-100-2e2023
+  title: 'Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations (2023 edition)'
+  publisher: NIST
+  year: 2024
+  source_url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2023.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105). Co-authors
+    include non-federal contributors (Northeastern University and Robust Intelligence, Inc.); published
+    by NIST under its Technical Series copyright and use policy.
+  sha256: d1086f53a1634d6787c59510c117b22bb7e1a242f920d2830a0d334058b0cb78
+- doc_id: nist-ai-100-2e2025
+  title: 'Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations (2025 edition)'
+  publisher: NIST
+  year: 2025
+  source_url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105). Co-authors
+    include non-federal contributors (Northeastern University, Cisco, and the U.K. AI Security Institute);
+    published by NIST under its Technical Series copyright and use policy.
+  sha256: 4811fb6ad73f9c9121843ab77e029b5adc6f2c86d33c2fc5b2099ef133847646
+- doc_id: nist-ai-100-4
+  title: 'Reducing Risks Posed by Synthetic Content: An Overview of Technical Approaches to Digital Content
+    Transparency'
+  publisher: NIST
+  year: 2024
+  source_url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-4.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: a387a4977db70d65cdbc178c8b0cb8aa5dedb85fa80d6f473c244e2767a4fd54
+- doc_id: nist-ai-100-5
+  title: A Plan for Global Engagement on AI Standards
+  publisher: NIST
+  year: 2024
+  source_url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-5.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 0c93bda23cc2e7d8cee8c443aa6343c4acfee5a31fb4d50e992ed4ff7e11cc15
+- doc_id: nist-ai-800-1-2pd
+  title: Managing Misuse Risk for Dual-Use Foundation Models (Second Public Draft)
+  publisher: NIST
+  year: 2025
+  source_url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-1.ipd2.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 362c24f9cfc1e3ba4e0756a49654eaacf3837e963fbd6ff20fe5fcefe06d3b82
+  line_numbers: true
+- doc_id: nist-ai-100-3
+  title: 'The Language of Trustworthy AI: An In-Depth Glossary of Terms'
+  publisher: NIST
+  year: 2023
+  source_url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-3.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 9a4d9b9bd3bf3727e2bd5043e35e5155d1e0ca402163cb34fde2ff745bf4828c
+- doc_id: nist-sp-1270
+  title: Towards a Standard for Identifying and Managing Bias in Artificial Intelligence
+  publisher: NIST
+  year: 2022
+  source_url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1270.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105). Co-authors
+    include non-federal contributors (University of Maryland and BNH.AI); published by NIST under its
+    Technical Series copyright and use policy.
+  sha256: 334042ba11ed24d7446cc31967e6e1eb4921f50a17eec4eb14ef1bff078f1e09
+- doc_id: nist-sp-800-218a
+  title: Secure Software Development Practices for Generative AI and Dual-Use Foundation Models
+  publisher: NIST
+  year: 2024
+  source_url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: e088c8bc75716824dae7c36a987f408364638561d381ed001b5c12254a7b10d8
+- doc_id: nist-sp-800-226
+  title: Guidelines for Evaluating Differential Privacy Guarantees
+  publisher: NIST
+  year: 2025
+  source_url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-226.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105). Co-authors
+    include non-federal contributors (University of Vermont and Galois, Inc.); published by NIST under
+    its Technical Series copyright and use policy.
+  sha256: 36568d5056587186bcaffc7cd47a81a0b6634fc227e70bbba5787de3744e193f
+- doc_id: nist-ir-8312
+  title: Four Principles of Explainable Artificial Intelligence
+  publisher: NIST
+  year: 2021
+  source_url: https://nvlpubs.nist.gov/nistpubs/ir/2021/NIST.IR.8312.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: cbfd3f8cd92a3dd01affdab036e9c30aa878588b336c6cba0938a9892a564546
+- doc_id: nist-ir-8367
+  title: Psychological Foundations of Explainability and Interpretability in Artificial Intelligence
+  publisher: NIST
+  year: 2021
+  source_url: https://nvlpubs.nist.gov/nistpubs/ir/2021/NIST.IR.8367.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 16d750362add11340ce63fa714c4b27554798b7266871a7a536ac35857216b99
+- doc_id: nist-cswp-29
+  title: The NIST Cybersecurity Framework (CSF) 2.0
+  publisher: NIST
+  year: 2024
+  source_url: https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 3c31f46fee98cac0c4323453e5109291a213b4de7fef8c058af9bf67f717433c
+- doc_id: nist-ai-700-2
+  title: 'Assessing Risks and Impacts of AI (ARIA) 0.1: Pilot Evaluation Report'
+  publisher: NIST
+  year: 2025
+  source_url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.700-2.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 5478e8c37a182adaf9449d1d315689beba3db2808db430c54fe3fc8da04ea3b9
+- doc_id: nist-ir-8596-iprd
+  title: Cybersecurity Framework Profile for Artificial Intelligence (Cyber AI Profile), Initial Preliminary
+    Draft
+  publisher: NIST
+  year: 2025
+  source_url: https://nvlpubs.nist.gov/nistpubs/ir/2025/NIST.IR.8596.iprd.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105). Co-authors
+    include non-federal contributors (MITRE); published by NIST under its Technical Series copyright and
+    use policy.
+  sha256: 4744b04dd75a278476b618b39ff57daef45c46760ec623f3e31543e73112cfde
+- doc_id: nist-ai-standards-plan-2019
+  title: 'U.S. Leadership in AI: A Plan for Federal Engagement in Developing Technical Standards and Related
+    Tools'
+  publisher: NIST
+  year: 2019
+  source_url: https://www.nist.gov/system/files/documents/2019/08/10/ai_standards_fedengagement_plan_9aug2019.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: d04576d061ba84d6de706e38380427c2abeaf599ffe616fcdbd68e624637b1f4
+- doc_id: eo-13859
+  title: 'Executive Order 13859: Maintaining American Leadership in Artificial Intelligence'
+  publisher: Executive Office of the President (Federal Register)
+  year: 2019
+  source_url: https://www.govinfo.gov/content/pkg/FR-2019-02-14/pdf/2019-02544.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 49faaba43e2e92bc2aea1d8a0eed6a8a490e1792e6ee010134c0194fb55b0672
+- doc_id: eo-13960
+  title: 'Executive Order 13960: Promoting the Use of Trustworthy Artificial Intelligence in the Federal
+    Government'
+  publisher: Executive Office of the President (Federal Register)
+  year: 2020
+  source_url: https://www.govinfo.gov/content/pkg/FR-2020-12-08/pdf/2020-27065.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 806dd5f22488f28f063bf06eae6f3f0480d40baf263bbe7e11721c01a265e5af
+- doc_id: eo-14110
+  title: 'Executive Order 14110: Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence'
+  publisher: Executive Office of the President (Federal Register)
+  year: 2023
+  source_url: https://www.govinfo.gov/content/pkg/FR-2023-11-01/pdf/2023-24283.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 46739dfc1af256961458d3b73fa4d6f4b447b38eaa72efd80966463818be68ab
+- doc_id: eo-14179
+  title: 'Executive Order 14179: Removing Barriers to American Leadership in Artificial Intelligence'
+  publisher: Executive Office of the President (Federal Register)
+  year: 2025
+  source_url: https://www.govinfo.gov/content/pkg/FR-2025-01-31/pdf/2025-02172.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 332b46f8cf4f4e7ed120a8092f14389640ada7538c65debc6fb3733298a5959e
+- doc_id: omb-m-21-06
+  title: 'OMB M-21-06: Guidance for Regulation of Artificial Intelligence Applications'
+  publisher: Office of Management and Budget
+  year: 2020
+  source_url: https://trumpwhitehouse.archives.gov/wp-content/uploads/2020/11/M-21-06.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: fe1c2b15852e26bef95a1312db24823ff191a0504511d2a81d99433ded12c857
+- doc_id: omb-m-24-10
+  title: 'OMB M-24-10: Advancing Governance, Innovation, and Risk Management for Agency Use of Artificial
+    Intelligence'
+  publisher: Office of Management and Budget
+  year: 2024
+  source_url: https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/03/M-24-10-Advancing-Governance-Innovation-and-Risk-Management-for-Agency-Use-of-Artificial-Intelligence.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 89e548f806c3e2c6702ab9996f92344b5c05ec0f26e0d4874ddb402449c044fb
+- doc_id: omb-m-24-18
+  title: 'OMB M-24-18: Advancing the Responsible Acquisition of Artificial Intelligence in Government'
+  publisher: Office of Management and Budget
+  year: 2024
+  source_url: https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/10/M-24-18-AI-Acquisition-Memorandum.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: eb9d3587e1556577737b9ce405053b1b18e0b664f73ce65c043898948a147e0a
+- doc_id: omb-m-25-21
+  title: 'OMB M-25-21: Accelerating Federal Use of AI through Innovation, Governance, and Public Trust'
+  publisher: Office of Management and Budget
+  year: 2025
+  source_url: https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 0aab0aa4eaeac969ed93894d3940c5dc9d0b7377048171b164a439e8b9e49813
+- doc_id: omb-m-25-22
+  title: 'OMB M-25-22: Driving Efficient Acquisition of Artificial Intelligence in Government'
+  publisher: Office of Management and Budget
+  year: 2025
+  source_url: https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-22-Driving-Efficient-Acquisition-of-Artificial-Intelligence-in-Government.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: e157538371eb9665fabdacff748788fc6afc0575bb3661d15b146f3138084cd8
+- doc_id: ostp-ai-bill-of-rights
+  title: Blueprint for an AI Bill of Rights
+  publisher: White House Office of Science and Technology Policy
+  year: 2022
+  source_url: https://bidenwhitehouse.archives.gov/wp-content/uploads/2022/10/Blueprint-for-an-AI-Bill-of-Rights.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: ab34b52e55b3f6641d5db725333129a66c0bbbb33a060f62ad44d52d98935c0a
+- doc_id: nstc-ai-rd-plan-2023
+  title: National Artificial Intelligence Research and Development Strategic Plan, 2023 Update
+  publisher: National Science and Technology Council
+  year: 2023
+  source_url: https://bidenwhitehouse.archives.gov/wp-content/uploads/2023/05/National-Artificial-Intelligence-Research-and-Development-Strategic-Plan-2023-Update.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 09033ed02033b3c445c85a9e4e203065121b9e06c3aa74d60dbb8790d2806563
+- doc_id: wh-ai-action-plan-2025
+  title: America's AI Action Plan
+  publisher: The White House
+  year: 2025
+  source_url: https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 91d56ab3ddefe43f395bde31e1c3923fb37f47091275aaf2a0d7da500ff547f4
+- doc_id: fda-ai-device-draft-2025
+  title: 'Artificial Intelligence-Enabled Device Software Functions: Lifecycle Management and Marketing
+    Submission Recommendations (Draft Guidance)'
+  publisher: U.S. Food and Drug Administration
+  year: 2025
+  source_url: https://www.fda.gov/media/184856/download
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 62e83e0f4cbd36aed96f2f98ced597f3146f25ae66abba9849325e4e4b7520bc
+  line_numbers: true
+- doc_id: fda-ai-drug-draft-2025
+  title: Considerations for the Use of Artificial Intelligence to Support Regulatory Decision-Making for
+    Drug and Biological Products (Draft Guidance)
+  publisher: U.S. Food and Drug Administration
+  year: 2025
+  source_url: https://www.fda.gov/media/184830/download
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 62352ed0fc17c07a670ed1381a8cdb1173f1c8988fb6e066da270e7cc72d4aaa
+  line_numbers: true
+- doc_id: fda-pccp-2024
+  title: Marketing Submission Recommendations for a Predetermined Change Control Plan for Artificial Intelligence-Enabled
+    Device Software Functions
+  publisher: U.S. Food and Drug Administration
+  year: 2024
+  source_url: https://www.fda.gov/media/166704/download
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 80f0f423efe0c8104460a9064615a2093e9a620deae013db670792c7f599e4d9
+- doc_id: uspto-ai-ip-2020
+  title: Public Views on Artificial Intelligence and Intellectual Property Policy
+  publisher: U.S. Patent and Trademark Office
+  year: 2020
+  source_url: https://www.uspto.gov/sites/default/files/documents/USPTO_AI-Report_2020-10-07.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: e37d3037a2bbcab8fceb024d162d57f1c848fb1d5937408ce31bb0d0b410b14e
+- doc_id: usco-ai-part1
+  title: 'Copyright and Artificial Intelligence, Part 1: Digital Replicas'
+  publisher: U.S. Copyright Office
+  year: 2024
+  source_url: https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-1-Digital-Replicas-Report.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 1bf58bd89d35d654664b1276287a19e89c6148758e3d31079b36092f89ea80d5
+- doc_id: usco-ai-part2
+  title: 'Copyright and Artificial Intelligence, Part 2: Copyrightability'
+  publisher: U.S. Copyright Office
+  year: 2025
+  source_url: https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 30889d027cb7ec5b1e29919f26b1603ae691db6e77472acb270a2f8b8e540947
+- doc_id: treasury-ai-cyber-2024
+  title: Managing Artificial Intelligence-Specific Cybersecurity Risks in the Financial Services Sector
+  publisher: U.S. Department of the Treasury
+  year: 2024
+  source_url: https://home.treasury.gov/system/files/136/Managing-Artificial-Intelligence-Specific-Cybersecurity-Risks-In-The-Financial-Services-Sector.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 8879ef563074b2720fc1a1f0513dd41d4374f7210cd681788b9f7ab8f67f8ffb
+- doc_id: dhs-ai-ci-roles-2024
+  title: Roles and Responsibilities Framework for Artificial Intelligence in Critical Infrastructure
+  publisher: U.S. Department of Homeland Security
+  year: 2024
+  source_url: https://www.dhs.gov/sites/default/files/2024-11/24_1114_dhs_ai-roles-and-responsibilities-framework-508.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 3705514fc151b00d775d4b7c0ad97ff4d87742cddf945466bcd16c6f0df077ca
+- doc_id: dhs-ai-ci-guidelines-2024
+  title: 'Mitigating Artificial Intelligence (AI) Risk: Safety and Security Guidelines for Critical Infrastructure
+    Owners and Operators'
+  publisher: U.S. Department of Homeland Security
+  year: 2024
+  source_url: https://www.dhs.gov/sites/default/files/2024-04/24_0426_dhs_ai-ci-safety-security-guidelines-508c.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: b6980aafd79a27b6adb048a6499db2abe22490374f1b40148a10a68efe7878a2
+- doc_id: ntia-ai-accountability-2024
+  title: Artificial Intelligence Accountability Policy Report
+  publisher: National Telecommunications and Information Administration
+  year: 2024
+  source_url: https://www.ntia.gov/sites/default/files/publications/ntia-ai-report-final.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: 1c8760609a7091d213e0ae4a0f369812f849fa243763d0e1a3825c93bdb20bdf
+- doc_id: ntia-open-weights-2024
+  title: Dual-Use Foundation Models with Widely Available Model Weights
+  publisher: National Telecommunications and Information Administration
+  year: 2024
+  source_url: https://www.ntia.gov/sites/default/files/publications/ntia-ai-open-model-report.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: f9234104727c0cee86cea71dad5aa705e47869dfa3a18db1f9ad0087bcffd04b
+- doc_id: nasa-tm-20210012886
+  title: NASA Framework for the Ethical Use of Artificial Intelligence (AI)
+  publisher: NASA
+  year: 2021
+  source_url: https://ntrs.nasa.gov/api/citations/20210012886/downloads/NASA-TM-20210012886.pdf
+  license_note: U.S. Government work; not subject to copyright in the United States (17 U.S.C. 105).
+  sha256: ebcd5bfcaf68e9851e7c39e99c875c00ede57453b0aa9f5dbc233ccbf00d7229
