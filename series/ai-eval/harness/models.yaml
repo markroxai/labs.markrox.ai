@@ -24,7 +24,7 @@ models:
   claude:
     provider: anthropic
     model: anthropic/<model-id>
-    key_env: ANTHROPIC_API_KEY
+    key_env: LABS_ANTHROPIC_API_KEY
     cost: {input: null, output: null}
 
   azure-openai:

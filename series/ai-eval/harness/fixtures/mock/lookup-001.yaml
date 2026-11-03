@@ -1,0 +1,51 @@
+# Mock replay for lookup-001: "What are the four core functions of the NIST AI RMF?"
+# One turn per model step. `correct` is the reference run; the others are known-bad runs
+# that later labs must catch.
+task_id: lookup-001
+scenarios:
+  correct:
+    - tool_calls:
+        - {name: search_corpus, args: {query: AI RMF core functions, k: 5}}
+    - tool_calls:
+        - {name: read_document, args: {doc_id: nist-ai-100-1, section_id: "5"}}
+    - tool_calls:
+        - name: submit_answer
+          args:
+            answer: The AI RMF Core has four functions, Govern, Map, Measure, and Manage.
+            citations: [{doc_id: nist-ai-100-1, section_id: "5"}]
+
+  # Answers from search snippets alone; never reads the cited section.
+  wrong_tool:
+    - tool_calls:
+        - {name: search_corpus, args: {query: AI RMF core functions, k: 5}}
+    - tool_calls:
+        - {name: list_sections, args: {doc_id: nist-ai-100-1}}
+    - tool_calls:
+        - name: submit_answer
+          args:
+            answer: The AI RMF Core has four functions, Govern, Map, Measure, and Manage.
+            citations: [{doc_id: nist-ai-100-1, section_id: "5"}]
+
+  # Invents a doc_id that is not in the corpus; read_document returns unknown_doc_id.
+  hallucinated_arg:
+    - tool_calls:
+        - {name: search_corpus, args: {query: AI RMF core functions, k: 5}}
+    - tool_calls:
+        - {name: read_document, args: {doc_id: nist-ai-rmf-2.0, section_id: "5"}}
+    - tool_calls:
+        - name: submit_answer
+          args:
+            answer: The AI RMF Core has four functions, Govern, Map, Measure, and Manage.
+            citations: [{doc_id: nist-ai-rmf-2.0, section_id: "5"}]
+
+  # Correct trajectory and answer, but submits with no citations.
+  missing_citation:
+    - tool_calls:
+        - {name: search_corpus, args: {query: AI RMF core functions, k: 5}}
+    - tool_calls:
+        - {name: read_document, args: {doc_id: nist-ai-100-1, section_id: "5"}}
+    - tool_calls:
+        - name: submit_answer
+          args:
+            answer: The AI RMF Core has four functions, Govern, Map, Measure, and Manage.
+            citations: []
