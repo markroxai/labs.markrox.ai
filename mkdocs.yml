@@ -13,6 +13,15 @@ theme:
       toggle: {icon: material/weather-sunny, name: Light mode}
   features: [navigation.instant, navigation.top, navigation.indexes]
 extra_css: [stylesheets/extra.css]
+copyright: >-
+  Copyright &copy; 2026 Mark Roxberry. Code is MIT licensed; written content is CC BY 4.0.<br>
+  <strong>Disclaimer:</strong> This is a personal project. The opinions, code, and findings
+  here are my own and do not represent the views of my employer or any client.
+  All content is provided "as is", without warranty of any kind, for educational and
+  research purposes only, and is not professional, legal, or security advice.
+  Results may not reproduce in your environment. Use at your own risk; you are responsible
+  for how you apply anything here, including any costs incurred from model or API usage.
+  Product names and trademarks belong to their respective owners.
 extra:
   social:
     - icon: material/web
